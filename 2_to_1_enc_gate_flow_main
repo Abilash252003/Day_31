@@ -1,0 +1,17 @@
+///100 Days of RTL///
+
+///Abilash P///
+
+///2:1 encoder in gate flow modeling///
+
+module enc_1_to_2 (A, Y);
+
+input  [1:0]A;
+output Y;
+
+wire p1;
+
+not n1 (p1, A[0]);
+and a1 (Y,  A[1], p1);
+
+endmodule
