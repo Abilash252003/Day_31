@@ -1,0 +1,22 @@
+///100 Days of RTL///
+
+///Abilash P///
+
+///2:1 encoder in behavioral flow modeling///
+
+module enc_1_to_2 (A, Y);
+
+input  [1:0]A;
+output reg Y;
+
+always @ (*)
+begin
+   case ({A[1], A[0]})
+   2'b00    : Y = 1'bx;
+   2'b01    : Y = 1'b0;
+   2'b10    : Y = 1'b1;
+   2'b11    : Y = 1'bx;   
+   default  : Y = 1'bx;
+   endcase
+end
+endmodule
